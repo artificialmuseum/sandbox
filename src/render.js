@@ -1,1 +1,24 @@
-var e=(new Date).getTime(),t=(t,a,o)=>{((t,a,o)=>{var r=(new Date).getTime();r>e+1e3&&(e=r,console.log({timestamp:t,frame:a,three:o}))})(t,a,o);var{model:r}=o;r.rotation.x+=.02,r.rotation.y+=.01,r.rotation.z+=.03};export{t as default};
+const SPEED = 0.01;
+
+let lastLog = new Date().getTime()
+
+const logOncePerSecond = (timestamp, frame, three) => {
+  const now = new Date().getTime()
+  if (now > lastLog + 1000) {
+    lastLog = now
+    console.log({ timestamp, frame, three })
+  }
+}
+
+
+export default (timestamp, frame, three) => {
+  /*
+   * log once per second
+   */
+  logOncePerSecond(timestamp, frame, three)
+
+  const { model } = three
+  model.rotation.x += SPEED * 2;
+  model.rotation.y += SPEED;
+  model.rotation.z += SPEED * 3;
+}
