@@ -3,13 +3,10 @@
   "version": "0.0.1",
   "description": "artificialmuseum.com sandbox - allows creation of artifacts for the artificial museum.",
   "scripts": {
-    "format": "f -w --file-types js gltf json --exclude docs draco",
-    "start": "gss --dir src --cache no -p 8000",
-    "test": "t -p",
-    "test:cov": "t"
+    "start": "gss --dir src --cache no -p 8000"
   },
   "type": "module",
-  "author": "TheSystemCollective",
+  "author": "SystemKollektiv",
   "license": "AGPL-3.0",
   "dependencies": {
     "three": "0.132.2"
