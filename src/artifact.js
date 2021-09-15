@@ -18,7 +18,7 @@ export default {
   cam: {
     // y is up
     y: 2,
-    z: 18,
+    z: 25,
   },
 
   /*
