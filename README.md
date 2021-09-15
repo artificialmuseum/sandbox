@@ -2,14 +2,18 @@
 
 This is the artifact creation sandbox for the [Artificial Museum](https://artificialmuseum.com).
 
-Creators can use this Sandbox to customize various features in our app:
+Makers can use this Sandbox to customize various features in their artifact:
 
-* Custom Artifact (edit src/artifact.js to edit).
-* Custom Skybox (change src/skybox/skybox.jpg to overwrite the default. max size is 4096x2048).
-* Custom Render frame logic (change the render() function in src/render.js)
-* ...
-
-for more information, see [src/artifact.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact.js)
+* ### Artifact Settings
+  see [src/artifact](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact.js) for detailed docs.
+* ### Custom Skybox
+  change src/skybox/skybox.jpg to overwrite the default. max size is 4096x2048.
+* ### Render frame logic
+  change the default export in [src/render.js](https://github.com/artificialmuseum/sandbox/blob/master/src/render.js)
+* ### Audio
+  add src/audio/artifact.mp4 and set artifact.audio in src/artifact.js to true.
+* ### Video
+  add src/video/artifact.mp4 and set artifact.video in src/artifact.js to true.
 
 ## getting started
 
