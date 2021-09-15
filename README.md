@@ -22,12 +22,17 @@ cd sandbox
 npm install
 npm start
 
-# alternative, on systems with python installed:
+# alternative, on systems with python 3 installed:
 cd src
 python -m http.server
+
+# alternative, if only python 2 is available
+cd src
+python -m SimpleHTTPServer
 ```
 
 the sandbox is running at [localhost:8000](http://localhost:8000), point your browser there to see it.
-
+the files will load from disk everytime and should not be cached,
+a simple page reload will show the changes instantly, without server restart.
 
 More info soon.
