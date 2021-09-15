@@ -17,11 +17,11 @@ const logOncePerSecond = (timestamp, frame, three) => {
  * three: object holding references to a lot of the scene objects, see below for details
  */
 
-export default (timestamp, frame, three) => {
-  logOncePerSecond(timestamp, frame, three)
+export default (timestamp, frame, scene, THREE) => {
+  logOncePerSecond(timestamp, frame, scene)
 
   /*
-   * destructure the individual keys from the threejs object
+   * destructure the individual keys from the scene object
    */
   const {
     model,      // the gltf file
@@ -31,7 +31,7 @@ export default (timestamp, frame, three) => {
     // clock,      // threejs clock, only runs if animations are running
     // actions,    // array of animations
     // mixer,      // threejs animation mixer
-  } = three
+  } = scene
 
   model.rotation.x += SPEED * 2;
   model.rotation.y += SPEED;
