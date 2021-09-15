@@ -10,11 +10,7 @@ const logOncePerSecond = (timestamp, frame, three) => {
   }
 }
 
-
 export default (timestamp, frame, three) => {
-  /*
-   * log once per second
-   */
   logOncePerSecond(timestamp, frame, three)
 
   const { model } = three
