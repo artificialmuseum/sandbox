@@ -2,7 +2,11 @@
 
 This is the artifact creation sandbox for the [Artificial Museum](https://artificialmuseum.com).
 
-Makers can use this Sandbox to customize various features in their artifact:
+Makers can use this Sandbox to customize various features in their artifact.
+
+All of the settings in this sandbox are the same as they are in the production version of the platform,
+lighting, skybox, scale, renderer and other rudimentary scene components are setup already.
+All that is left to do is to customize various aspects of the artifact.
 
 ### Artifact Settings
 see [src/artifact/artifact.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/artifact.js) for detailed docs.
@@ -11,10 +15,10 @@ see [src/artifact/artifact.js](https://github.com/artificialmuseum/sandbox/blob/
 change src/skybox/skybox.jpg to overwrite the default. max size is 4096x2048.
 
 ### Audio
-add src/audio/artifact.mp4 and set artifact.audio in src/artifact.js to true.
+add src/audio/artifact.mp4 and set artifact.audio in src/artifact/artifact.js to true.
 
 ### Video
-add src/video/artifact.mp4 and set artifact.video in src/artifact.js to true.
+add src/video/artifact.mp4 and set artifact.video in src/artifact/artifact.js to true.
 
 ## Functional Hooks
 
