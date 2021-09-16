@@ -4,16 +4,46 @@ This is the artifact creation sandbox for the [Artificial Museum](https://artifi
 
 Makers can use this Sandbox to customize various features in their artifact:
 
-* ### Artifact Settings
-  see [src/artifact](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact.js) for detailed docs.
-* ### Custom Skybox
-  change src/skybox/skybox.jpg to overwrite the default. max size is 4096x2048.
-* ### Render frame logic
-  change the default export in [src/render.js](https://github.com/artificialmuseum/sandbox/blob/master/src/render.js)
-* ### Audio
-  add src/audio/artifact.mp4 and set artifact.audio in src/artifact.js to true.
-* ### Video
-  add src/video/artifact.mp4 and set artifact.video in src/artifact.js to true.
+### Artifact Settings
+see [src/artifact/artifact.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/artifact.js) for detailed docs.
+
+### Custom Skybox
+change src/skybox/skybox.jpg to overwrite the default. max size is 4096x2048.
+
+### Audio
+add src/audio/artifact.mp4 and set artifact.audio in src/artifact.js to true.
+
+### Video
+add src/video/artifact.mp4 and set artifact.video in src/artifact.js to true.
+
+## Functional Hooks
+
+Hooks allow us to... hook into various runtime events in the Artificial Museum 3D engine.
+
+### Scene Initiation Hook
+
+This function is run **once** the whole scene, skybox and gltf file is loaded,
+and once audio and video files have emitted a "canplaythrough" or "metadataloaded" (ios does not emit canplaythrough) event.
+
+Change the default export in
+[src/artifact/init.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/init.js)
+to adapt it's functionality.
+
+This function can be used to set up various parts of the model, load additional data, attach events to objects, add raycasts for "press" events.
+
+### Render frame logic
+
+This function runs once every frame.
+
+this function gets 4 arguments:
+timestamp: current threejs timestamp since scene start.
+frame: if in webxr, this gives us access to the current webxr frame
+scene: the threejs object of our scene, with camera, renderer and other scene contents generated in our three.js implementation
+THREE: this is the same object you would get if you imported THREE manually.
+
+Change the default export in
+[src/artifact/render.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/render.js)
+to adapt it's functionality.
 
 ## getting started
 
