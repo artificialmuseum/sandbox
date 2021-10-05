@@ -58,7 +58,7 @@ export default {
   /*
    * if the glb file includes meshes that have "clip" in their name,
    * and if clip is set to true,
-   * this meshes will turn into clipping masks for all other objects in the scene.
+   * these meshes will turn into clipping masks for all other objects in the scene.
    * masking has to be used carefully,
    * the visitors can just move into the clipping masks and cancel the effect.
    */
@@ -67,19 +67,18 @@ export default {
   /*
    * which side of the clipping mesh clips.
    * valid values: 'back', 'double'.
-   * set to 'back' to use BackSide, 'double' to clip both sides.
+   * set to 'back' to use BackSide, 'double' to clip from both sides.
    * if clipSide is not set, FrontSide is used.
    */
   // clipSide: 'back',
 
   /*
    * loads /audio/artifact.mp4 and starts playing it when the scene starts.
-   *
    */
   // audio: true,
 
   /*
-   * loads /video/artifact.mp4 onto an object in the gltf file.
+   * loads /video/artifact/artifact.mp4 onto an object in the gltf file.
    * object has to be named "videotarget" and should be as simple as possible.
    */
   // video: true,
@@ -88,7 +87,7 @@ export default {
    * use greenscreen on the video material
    * can be set to true to use 0xd432, which is the default green.
    */
-  // chromaKey: 0xd432,
+  // chromaKey: true, // 0xd432,
 
   /*
    * Multiple overlapping transparent objects cause problems when the camera rotates around them.
