@@ -3,16 +3,17 @@
   "version": "0.0.1",
   "description": "artificialmuseum.com sandbox - allows creation of artifacts for the Artificial Museum.",
   "scripts": {
-    "start": "gss --dir src --cache no -p 8000"
+    "start": "gss --dir src --cache no -p 8000",
+    "dev": "npm start"
   },
   "type": "module",
   "author": "SystemKollektiv",
   "license": "AGPL-3.0",
   "dependencies": {
-    "three": "0.132.2"
+    "three": "0.133.1"
   },
   "devDependencies": {
-    "@grundstein/gss": "0.0.3"
+    "@grundstein/gss": "0.0.4"
   },
   "contributors": [
     {
