@@ -10,9 +10,6 @@
   "author": "SystemKollektiv",
   "license": "AGPL-3.0",
   "dependencies": {
-    "three": "0.133.1"
-  },
-  "devDependencies": {
     "@grundstein/gss": "0.0.4"
   },
   "contributors": [
