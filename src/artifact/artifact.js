@@ -12,6 +12,8 @@ export default {
    */
   file: 'artifact',
 
+  type: -1,
+
   /*
    * sets the position of the camera in the fallback scene (laptops, older phones)
    */
