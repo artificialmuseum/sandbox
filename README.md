@@ -29,8 +29,8 @@ Hooks allow us to... hook into various runtime events in the Artificial Museum 3
 This function is run **once** the whole scene, skybox and gltf file is loaded,
 and once audio and video files have emitted a "canplaythrough" or "metadataloaded" (ios does not emit canplaythrough) event.
 
-Change the default export in
-[src/artifact/init.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/init.js)
+Change the `const init =` export in
+[src/artifact/scene.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/scene.js)
 to adapt it's functionality.
 
 This function can be used to set up various parts of the model, load additional data, attach events to objects, add raycasts for "press" events.
@@ -45,8 +45,8 @@ frame: if in webxr, this gives us access to the current webxr frame
 scene: the threejs object of our scene, with camera, renderer and other scene contents generated in our three.js implementation
 THREE: this is the same object you would get if you imported THREE manually.
 
-Change the default export in
-[src/artifact/render.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/render.js)
+Change the `const render = ` export in
+[src/artifact/scene.js](https://github.com/artificialmuseum/sandbox/blob/master/src/artifact/scene.js)
 to adapt it's functionality.
 
 ## getting started
@@ -70,7 +70,5 @@ python -m SimpleHTTPServer
 ```
 
 the sandbox is running at [localhost:8000](http://localhost:8000), point your browser there to see it.
-the files will load from disk everytime and should not be cached,
-a simple page reload will show the changes instantly, without server restart.
-
-More info soon.
+open the developer console and do a full page reload (ctrl + shift + r)
+to show the changes instantly, without server restart.
