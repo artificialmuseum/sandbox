@@ -56,5 +56,4 @@ export default {
    * the leading slash is important
    */
   sky: '/skybox',
-
 }
