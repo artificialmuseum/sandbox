@@ -1,7 +1,8 @@
 export default class CustomScene {
   /*
    * CustomScene constructor
-   * this function gets called very early on in the loading process.
+   *
+   * this function gets called very early on in the loading process by the preloader.
    */
   constructor({ artifact, mergeConfig, preload, $, W, is }) {
     /*
@@ -27,7 +28,20 @@ export default class CustomScene {
   }
 
   /*
-   * CustomScene.afterLoadModel
+   * CustomScene.preload
+   *
+   */
+
+  async preload({ artifact, preload }) {
+    /*
+     * this function can be used to preload additional assets.
+     * for example, the ply loader scene uses this function to load the ply file.
+     */
+  }
+
+  /*
+   * CustomScene.beforeLoadModel
+   *
    * gets called directly before the Arm Engine initializes the gltf file in threejs.
    * can be used to on-the-fly change the gltf, for example cloning one mesh from the gltf file to create particles.
    */
