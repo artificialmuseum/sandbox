@@ -29,14 +29,14 @@ export default class CustomScene {
       for (let oy = 0; oy < ygrid; oy++) {
         const geometry = cubeGeometry.clone()
 
-        this.change_uvs(geometry, ux, uy, ox, oy);
+        this.change_uvs(geometry, ux, uy, ox, oy)
 
-        const material = new MeshLambertMaterial({ color: 0xffffff });
+        const material = new MeshLambertMaterial({ color: 0xffffff })
 
-        material.hue = ox / xgrid;
-        material.saturation = 1 - oy / ygrid;
+        material.hue = ox / xgrid
+        material.saturation = 1 - oy / ygrid
 
-        material.color.setHSL(material.hue, material.saturation, 0.5);
+        material.color.setHSL(material.hue, material.saturation, 0.5)
 
         const mesh = new Mesh(geometry, material)
         mesh.name = `videotarget_i_j`
@@ -56,7 +56,7 @@ export default class CustomScene {
       }
     }
 
-    engine.renderer.autoClear = false;
+    engine.renderer.autoClear = false
     this.model = parent
   }
 
@@ -65,7 +65,7 @@ export default class CustomScene {
 
     for (let i = 0; i < uvs.length; i += 2) {
       uvs[i] = (uvs[i] + offsetx) * unitx
-      uvs[i + 1] = 1 - ((uvs[i + 1] + offsety) * unity)
+      uvs[i + 1] = 1 - (uvs[i + 1] + offsety) * unity
     }
   }
 
@@ -75,8 +75,8 @@ export default class CustomScene {
     for (let i = 0; i < this.meshes.length; i++) {
       const { material } = this.meshes[i]
 
-      let h = (360 * (material.hue + time) % 360) / 360;
-      material.color.setHSL(h, material.saturation, 0.5);
+      let h = ((360 * (material.hue + time)) % 360) / 360
+      material.color.setHSL(h, material.saturation, 0.5)
     }
 
     if (this.counter % 1000 > 200) {
@@ -98,11 +98,11 @@ export default class CustomScene {
       for (let i = 0; i < this.meshes.length; i++) {
         const mesh = this.meshes[i]
 
-        mesh.dx *= - 1;
-        mesh.dy *= - 1;
+        mesh.dx *= -1
+        mesh.dy *= -1
       }
     }
 
-    this.counter++;
+    this.counter++
   }
 }
