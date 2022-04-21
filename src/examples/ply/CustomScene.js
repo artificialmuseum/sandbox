@@ -4,7 +4,7 @@ export default class CustomScene {
    *
    * this function gets called very early on in the loading process by the preloader.
    */
-  constructor({ artifact, mergeConfig, preload, $, W, is }) {
+  constructor({ artifact, mergeConfig, preload, W }) {
     /*
      * this is a reference to THREE.js, all default exports from threejs are in here.
      */
@@ -66,24 +66,11 @@ export default class CustomScene {
 
     const points = new THREE.Points(geo, material)
 
+    /*
+     * by setting this.model here,
+     * in combination with glb: false in the artifact.js,
+     * we force the ArmEngine, not to load any other files.
+     */
     this.model = points
-  }
-
-  /*
-   * CustomScene.beforeLoadModel
-   *
-   * gets called directly before the Arm Engine initializes the gltf file in threejs.
-   * can be used to on-the-fly change the gltf, for example cloning one mesh from the gltf file to create particles.
-   */
-  async beforeLoadModel({ engine }) {
-    this.engine = engine
-  }
-
-  /*
-   * CustomScene.tick
-   * this function gets called every frame.
-   * it receives the timestamp and frame, but does not render on it's own.
-   */
-  tick({ delta, timestamp, frame }) {
   }
 }
