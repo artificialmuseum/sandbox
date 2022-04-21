@@ -5,11 +5,6 @@ export default {
   version: 1,
 
   /*
-   * will load src/artifact.glb
-   */
-  file: 'artifact',
-
-  /*
    * type
    *
    * which scene type to load.
@@ -31,4 +26,9 @@ export default {
    * the leading slash is important
    */
   sky: '/skybox',
+
+  /*
+   * will load src/artifact.glb
+   */
+  file: 'artifact',
 }

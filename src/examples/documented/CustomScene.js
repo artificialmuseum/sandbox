@@ -104,7 +104,8 @@ export default class CustomScene {
     this.timestamp = timestamp
 
     /*
-     * frame: how many frames have happened since the runtime started
+     * frame: this is the webxr frame, useful for some advanced features.
+     * since ios does not yet support webxr, this is largely unused and, unfortunately, quite useless.
      */
     this.frame = frame
 

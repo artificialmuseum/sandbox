@@ -165,7 +165,8 @@ export default {
    * clickables
    *
    * this allows usage of the onTouch function in the CustomScene.
-   * The example below will find any object with a name that includes the word "cube",
+   * The example below will find any object with a name
+   * that includes the word "cube",
    * starts with "test" or is named exactly "clickable"
    */
   // clickables: ['*cube*', 'test*', 'clickable'],
