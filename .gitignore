@@ -7,3 +7,4 @@ db
 build
 build.sh
 dev.sh
+*.blend1
