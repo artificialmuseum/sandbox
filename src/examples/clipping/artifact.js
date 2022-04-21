@@ -56,4 +56,8 @@ export default {
    * the leading slash is important
    */
   sky: '/skybox',
+
+  video: '/examples/clipping/artifact.mp4',
+
+  chromaKey: 0xff0000,
 }
