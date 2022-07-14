@@ -1,6 +1,7 @@
 export default {
-  name: 'Clickable Cubes',
-  slug: 'clickablecubes',
+  name: 'Look at camera',
+  slug: 'lookatcamera',
+  description: ['Objects and bones can be made to look at the camera.'],
 
   version: 1,
 

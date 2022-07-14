@@ -1,6 +1,7 @@
 export default {
   name: 'Clickable Cubes',
-  slug: 'clickablecubes',
+  slug: 'clickables',
+  description: ['This example showcases clickable cubes that change their color on touch'],
 
   version: 1,
 

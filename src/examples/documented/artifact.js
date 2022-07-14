@@ -1,6 +1,10 @@
 export default {
-  name: 'Artifact',
-  slug: 'artifact',
+  name: 'Documented Artifact',
+  slug: 'documented',
+  description: [
+    'This example includes documentation for all CustomScene hooks as well as an artifact.js file with most settings.',
+    'If you want to get an overview over all the possible features, start here.',
+  ],
 
   version: 1,
 

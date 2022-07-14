@@ -1,6 +1,11 @@
 export default {
-  name: 'Clipping',
-  slug: 'Clipping',
+  name: 'Videotarget',
+  slug: 'videotarget',
+  description: [
+    'This example shows how to use a videotarget texture in the artifact.js file.',
+    'It also demonstrates instancing of cubes and setting their uvs to map the video.',
+    'Please note that the uvs of the backside are broken and would need quite some math wizardry to get right.',
+  ],
 
   version: 1,
 

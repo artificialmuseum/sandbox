@@ -1,6 +1,9 @@
 export default {
-  name: 'Artifact',
-  slug: 'artifact',
+  name: 'Ply',
+  slug: 'ply',
+  description: [
+    'This example loads a ply file and uses the vertex colors of the object as material.',
+  ],
 
   version: 1,
 

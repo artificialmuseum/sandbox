@@ -1,6 +1,7 @@
 export default {
   name: 'Clipping',
-  slug: 'Clipping',
+  slug: 'clipping',
+  description: 'Simple example demonstrating the clip setting of the artifact.js file.',
 
   version: 1,
 
