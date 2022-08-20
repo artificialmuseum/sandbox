@@ -218,7 +218,7 @@ export default {
    *
    *  This setting changes the Sensibility of the audioAnalyser.
    */
-  //audioAnalyserThreshold,
+  //audioAnalyserThreshold: 10,
 
   /*
    * waves

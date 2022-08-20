@@ -58,7 +58,7 @@ export default class CustomScene {
 
     const { color, size, vertexColors } = this.config
 
-    const material = new THREE.PointsMaterial({
+    const material = new THREE.ShaderMaterial({
       color,
       size,
       vertexColors,
@@ -69,7 +69,7 @@ export default class CustomScene {
     /*
      * by setting this.model here,
      * in combination with glb: false in the artifact.js,
-     * we force the ArmEngine, not to load any other files.
+     * we force the ArmEngine, not to load a glb file.
      */
     this.model = points
   }

@@ -2,6 +2,13 @@ export default {
   name: 'Portal',
   slug: 'portal',
 
+  description: [
+    'A portal that you can enter through to experience another world.',
+    'Caveats:',
+    'Only rectangular doors, positioned exactly around 0,0,0.',
+    'Only rectangular rooms.',
+  ],
+
   version: 1,
 
   /*
@@ -17,17 +24,14 @@ export default {
    */
   type: -1,
 
-  portal: {
-    out: 'clip',
-    in: 'inside',
-    minDistance: 2.1,
-    entrance: { x: 0.4, y: 2.0, z: 0.0 },
-  },
-
   clip: true,
 
   lookat: {
     z: -2,
+  },
+
+  cam: {
+    maxPolar: 70,
   },
 
   /*
