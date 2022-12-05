@@ -2,8 +2,8 @@ export default {
   name: 'Documented Artifact',
   slug: 'documented',
   description: [
-    'This example includes documentation for all CustomScene hooks as well as an artifact.js file with most settings.',
-    'If you want to get an overview over all the possible features, start here.',
+    'This example includes documentation for all CustomScene hooks as well as an artifact.js file with most of the settings.',
+    'If you want to get an overview over the possible features, start here.',
   ],
 
   version: 1,
@@ -26,7 +26,6 @@ export default {
    *  3, Kinect: Play a kinect video using the kinect depth data as 3d displacement map
    *  4, Displacement: Plays a video on a plane, using the color of the video as a depth map.
    *  9, Latk Scene: Play any latk animation
-   * 11, Ply Scene: Load any ply file
    * 18, AudioAnalyserLights: Change the lights based on the audio volume of the played audio file.
    */
   type: -1,
@@ -37,6 +36,14 @@ export default {
    * uncomment to not load a glb file for this scene.
    */
   // glb: false,
+
+  /*
+   * ply files (pointclouds)
+   * uncomment to load a ply file instead of or additionally to the glb file
+   */
+  // ply: {
+  //  file: '/examples/documented/artifact',
+  // },
 
   /*
    * cam

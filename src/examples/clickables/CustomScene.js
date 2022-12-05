@@ -13,7 +13,7 @@ export default class CustomScene {
       const colorId = Math.floor(Math.random() * this.config.colors.length)
 
       const color = this.config.colors[colorId]
-      touched.material.color = color
+      touched.node.material.color = color
     })
   }
 }
