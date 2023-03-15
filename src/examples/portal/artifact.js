@@ -3,9 +3,7 @@ export default {
   slug: 'portal',
   version: 1,
 
-  description: [
-    'A portal that you can enter through to experience another world.',
-  ],
+  description: ['A portal that you can enter through to experience another world.'],
 
   /*
    * type
@@ -29,7 +27,7 @@ export default {
     'insideSphere',
     // 'door',
     'target',
-    'clipSphere'
+    'clipSphere',
   ],
 
   /*
