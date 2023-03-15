@@ -10,7 +10,7 @@
   "author": "SystemKollektiv",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@grundstein/gss": "0.0.13"
+    "@grundstein/gss": "0.0.14"
   },
   "contributors": [
     {
