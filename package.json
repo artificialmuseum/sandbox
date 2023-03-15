@@ -15,11 +15,15 @@
   "contributors": [
     {
       "name": "jascha ehrenreich",
-      "github": "jaeh"
+      "url": "https://github.com/jaeh"
     },
     {
       "name": "daniela weiss",
-      "github": "mslitto"
+      "url": "https://github.com/mslitto"
+    },
+    {
+      "name": "nick fox-gieg",
+      "url": "https://github.com/n1ckfg/"
     }
   ]
 }
