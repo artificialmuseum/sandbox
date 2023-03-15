@@ -1,44 +1,47 @@
 export default {
   name: 'Portal',
   slug: 'portal',
+  version: 1,
 
   description: [
     'A portal that you can enter through to experience another world.',
-    'Caveats:',
-    'Only rectangular doors, positioned exactly around 0,0,0.',
-    'Only rectangular rooms.',
   ],
-
-  version: 1,
-
-  /*
-   * will load src/artifact.glb
-   */
-  file: 'examples/portal/artifact',
 
   /*
    * type
    *
-   * which scene type to load
-   * 1 is the default scene without special features.
+   * which scene type to load.
+   * 20 loads the portal scene.
    */
-  type: -1,
+  type: 20,
 
   clip: true,
 
+  // renderTargets: [
+  //   { cam: 'renderTargetCam', target: 'target', off: ['inside', 'insideSphere', 'clipSphere'] },
+  // ],
+
   lookat: {
-    z: -2,
+    z: -3,
   },
 
-  cam: {
-    maxPolar: 70,
-  },
+  noShadowCastObjects: [
+    'insideSphere',
+    // 'door',
+    'target',
+    'clipSphere'
+  ],
 
   /*
    * sky
    *
-   * will load src/skybox.jpg as skybox image.
+   * will load /skybox.jpg as skybox image.
    * the leading slash is important
    */
   sky: '/skybox',
+
+  /*
+   * will load examples/portal/artifact.glb
+   */
+  file: 'examples/portal/artifact',
 }

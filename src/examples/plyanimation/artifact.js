@@ -1,9 +1,7 @@
 export default {
   name: 'Ply Animation',
   slug: 'plyanimation',
-  description: [
-    'This example loads 3 ply files and then translates between them.',
-  ],
+  description: ['This example loads 3 ply files and then translates between them.'],
 
   version: 1,
 

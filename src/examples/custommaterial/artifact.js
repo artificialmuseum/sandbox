@@ -12,7 +12,6 @@ export default {
    */
   type: -1,
 
-
   /*
    * will load ./artifact.glb
    */
