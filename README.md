@@ -63,3 +63,29 @@ The sandbox exposes multiple hooks into the engine runtime loop.
 See the
 [src/CustomScene.js](https://github.com/artificialmuseum/sandbox/blob/master/src/examples/documented/CustomScene.js)
 file for a list of all those functions.
+
+## Glitch
+
+this sandbox can be loaded on glitch,
+
+### usage
+
+click new project
+
+click "import from github"
+
+copy `https://github.com/artificialmuseum/sandbox.git` in the popup window
+
+press ok or the enter key
+
+wait for glitch to do the magic
+
+click the terminal in the bottom left
+
+once it opened, input
+
+`sh init-glitch.sh`
+
+and press the enter key on your keyboard.
+
+the page will refresh and you will see the directory with the files.
