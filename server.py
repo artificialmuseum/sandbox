@@ -1,49 +1,80 @@
 import sys
 import os
+import argparse
 
-PORT = 8000
+pyVersion = sys.version_info[0]
 
-KEEP_RUNNING = True
-
-def keep_running():
-  return KEEP_RUNNING
-
-os.chdir('./src')
-
-try:
-    # Python 3
+# this ifelse distinguishes python 2 and 3 and then
+# imports from the appropriate libraries.
+# all code below either works in both 2 and 3,
+# or is guarded by additional if statements
+if pyVersion == 3:
+    # Python 3 imports
     from http.server import HTTPServer, SimpleHTTPRequestHandler
     from socketserver import TCPServer
-except ImportError:
-     # Python 2
+elif pyVersion == 2:
+     # Python 2 imports
     from SimpleHTTPServer import BaseHTTPServer
     from SocketServer import TCPServer
     HTTPServer = BaseHTTPServer.HTTPServer
     from SimpleHTTPServer import SimpleHTTPRequestHandler
+else:
+  print("o.O this is awkward, i expected python 2 or 3 and you have neither.")
 
-Handler = SimpleHTTPRequestHandler
-Handler.extensions_map.update({
-  '.js': 'text/javascript',
-})
+# this function allows us to setup a minimal cli for this script.
+def init_argparse():
+  parser = argparse.ArgumentParser(
+    usage="%(prog)s [OPTION] [FILE]...",
+    description="Artificial Museum Sandbox - Create and test your artifact on your own computer."
+  )
 
-# killed processes won't linger tcp sockets
-TCPServer.allow_reuse_address = True
+  parser.add_argument(
+    "-v", "--version", action="version",
+    version = "%(prog)s version 0.0.1"
+  )
 
-if sys.version_info[0] == 2:
-  print("using python " + str(sys.version_info[0]))
+  # custom port: --port 8000
+  parser.add_argument("-p", "--port", nargs=1, default=8000)
+  # custom dir: --dir src
+  parser.add_argument("-d", "--dir", nargs=1, default="src")
 
-  httpd = TCPServer(("", PORT), Handler)
+  return parser
 
-  print("Serving at port: http://localhost:" + str(PORT))
+def main():
+  # parse the cli arguments
+  parser = init_argparse()
+  # into the args variable
+  args = parser.parse_args()
 
-  httpd.serve_forever()
+  # move to the src dir to serve it directly
+  if args.dir != ".":
+    os.chdir(args.dir)
 
-if sys.version_info[0] == 3:
-  print("using python", sys.version_info[0])
+  # start our imported handler
+  Handler = SimpleHTTPRequestHandler
+  # add .js mimetype, windows needs it.
+  Handler.extensions_map.update({ '.js': 'text/javascript' })
 
-  with TCPServer(("", PORT), Handler) as httpd:
-    Handler
+  # killed processes won't block tcp sockets
+  TCPServer.allow_reuse_address = True
 
-    print("serving at port: http://localhost:" + str(PORT))
+  try:
+    print("Using python " + str(pyVersion))
+    print("Serving at: 'http://localhost:" + str(args.port) + "'")
 
-    httpd.serve_forever()
+    # if in python 2, start the TCPServer the python 2 way.
+    if pyVersion == 2:
+      httpd = TCPServer(("", args.port), Handler)
+      httpd.serve_forever()
+
+    # if in python 3, start the TCPServer the python 3 way.
+    elif pyVersion == 3:
+      with TCPServer(("", args.port), Handler) as httpd:
+        Handler
+        httpd.serve_forever()
+
+  except KeyboardInterrupt:
+    print(" <=== Received KeyboardInterrupt, Exiting...")
+    sys.exit(0)
+
+main()
