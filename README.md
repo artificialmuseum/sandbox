@@ -17,6 +17,7 @@ cd sandbox
 ```
 
 ## if you have nodejs installed
+
 ```
 # install dependencies
 npm install
@@ -25,6 +26,7 @@ npm start
 ```
 
 ## alternative, on systems with python installed:
+
 (almost all systems will support python, most operating systems have it preinstalled):
 
 start a shell (terminal, bash, cmd.exe), then navigate to this directory.
@@ -33,11 +35,17 @@ go to the src directory.
 `cd src`
 
 `python server.py`
+
 ## OR
+
 `python3 server.py`
+
 ## OR
+
 `python2 server.py`
+
 ## OR
+
 `py server.py`
 
 after starting one of the servers above, the sandbox is running at [localhost:8000](http://localhost:8000), point your browser there to see it.
@@ -46,8 +54,8 @@ do a full page reload (ctrl + shift + r) to show the changes instantly, without 
 or, even better, open the dev tools (ctrl + shift + i) and go to the network tab and check the "disable cache" button there.
 
 # Artifact Settings
-see [src/artifact.js](https://github.com/artificialmuseum/sandbox/blob/master/src/examples/documented/artifact.js) for detailed artifact documentation.
 
+see [src/artifact.js](https://github.com/artificialmuseum/sandbox/blob/master/src/examples/documented/artifact.js) for detailed artifact documentation.
 
 ## Programming
 
