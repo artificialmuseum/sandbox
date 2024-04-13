@@ -6,7 +6,14 @@
 /*
  * force glitch to use https
  */
-if (window.location.protocol === 'http:' && window.location.host !== 'localhost') {
+
+const {
+  hostname,
+  protocol
+} = window.location;
+const isLocal = hostname !== 'localhost' && hostname !== '127.0.0.1';
+const isHttp = protocol === 'http:';
+if (!isLocal && isHttp) {
   window.location.protocol = 'https:';
 }
 const main = async () => {
