@@ -3,13 +3,18 @@
  *
  */
 
+/*
+ * force glitch to use https
+ */
+if (window.location.protocol === 'http:') {
+  window.location.protocol = 'https:';
+}
 const main = async () => {
   const {
     sandbox
-  } = await import('https://staging.artificialmuseum.com/sandbox.js');
-  let file = 'artifact.js';
+  } = await import('https://engine.artificialmuseum.com/sandbox.js');
   await sandbox({
-    file
+    file: 'artifact.js'
   });
 };
 main();
