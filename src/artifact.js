@@ -30,5 +30,5 @@ export default {
   /*
    * will load src/artifact.glb
    */
-  file: 'artifact',
+  file: '/artifact.glb',
 }
