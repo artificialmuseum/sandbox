@@ -8,7 +8,7 @@ export default {
   /*
    * will load src/artifact.glb
    */
-  file: 'examples/lookatcamera/artifact',
+  file: '/examples/lookatcamera/artifact.glb',
 
   /*
    * type

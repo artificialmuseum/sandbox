@@ -8,7 +8,7 @@ export default {
   /*
    * will load src/artifact.glb
    */
-  file: 'examples/clipping/clipping',
+  file: '/examples/clipping/clipping.glb',
 
   /*
    * type

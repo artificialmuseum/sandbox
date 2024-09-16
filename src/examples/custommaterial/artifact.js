@@ -15,7 +15,7 @@ export default {
   /*
    * will load ./artifact.glb
    */
-  file: 'examples/custommaterial/artifact',
+  file: '/examples/custommaterial/artifact.glb',
 
   /*
    * sky

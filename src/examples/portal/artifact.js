@@ -41,5 +41,5 @@ export default {
   /*
    * will load examples/portal/artifact.glb
    */
-  file: 'examples/portal/artifact',
+  file: '/examples/portal/artifact.glb',
 }

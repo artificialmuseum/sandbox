@@ -11,7 +11,15 @@ export default {
   /*
    * will load src/artifact.glb
    */
-  file: 'artifact',
+  file: '/examples/documented/artifact.glb',
+
+  /*
+   * sky
+   *
+   * will load src/skybox.jpg as skybox image.
+   * the leading slash is important
+   */
+  sky: '/skybox',
 
   /*
    * type
@@ -125,14 +133,6 @@ export default {
    * if clipSide is not set, FrontSide is used.
    */
   // clipSide: 'back',
-
-  /*
-   * sky
-   *
-   * will load src/skybox.jpg as skybox image.
-   * the leading slash is important
-   */
-  sky: '/skybox',
 
   /*
    * audio

@@ -10,7 +10,9 @@ export default {
   /*
    * will load src/examples/ply/artifact.ply
    */
-  file: '/examples/ply/artifact',
+  ply: {
+    file: '/examples/ply/artifact.ply',
+  },
 
   /*
    * type

@@ -8,15 +8,15 @@ export default {
   /*
    * will load src/examples/ply/artifact.ply
    */
-  // file: '/examples/ply/artifact',
 
   ply: {
+    // file: '/examples/ply/artifact.ply',
     files: [
-      // '/examples/plyanimation/lens01',
-      // '/examples/plyanimation/lens02',
-      '/examples/plyanimation/a',
-      '/examples/plyanimation/b',
-      '/examples/plyanimation/c',
+      // '/examples/plyanimation/lens01.ply',
+      // '/examples/plyanimation/lens02.ply',
+      '/examples/plyanimation/a.ply',
+      '/examples/plyanimation/b.ply',
+      '/examples/plyanimation/c.ply',
     ],
     speed: 0.3,
     animated: true,
