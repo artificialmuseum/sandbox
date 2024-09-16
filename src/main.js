@@ -19,12 +19,12 @@ if (!isLocal && isHttp) {
 const main = async () => {
   const {
     sandbox
-  } = await import('http://localhost:8006/sandbox.js');
+  } = await import('https://engine.artificialmuseum.com/sandbox.js');
   await sandbox({
     file: 'artifact.js',
     urls: {
       GLB_URL: 'http://localhost:8000',
-      ENGINE_URL: 'http://localhost:8006'
+      ENGINE_URL: 'https://engine.artificialmuseum.com'
     }
   });
 };
