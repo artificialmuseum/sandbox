@@ -8,6 +8,10 @@ export default class CustomScene {
     this.config.colors = this.config.colors.map(col => new preload.THREE.Color(col))
   }
 
+  onPoint(intersects) {
+    console.log('onPoint', intersects)
+  }
+
   onTouch(intersects) {
     intersects.forEach(touched => {
       const colorId = Math.floor(Math.random() * this.config.colors.length)

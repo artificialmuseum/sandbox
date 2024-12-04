@@ -19,6 +19,7 @@ export default {
   type: -1,
 
   clickables: ['*cube*'],
+  clickablesArePointable: true,
 
   /*
    * sky
