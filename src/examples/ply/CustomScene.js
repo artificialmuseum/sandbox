@@ -1,3 +1,5 @@
+import * as THREE from 'https://stagingengine.artificialmuseum.com/three.js'
+
 export default class CustomScene {
   /*
    * CustomScene constructor
@@ -5,11 +7,6 @@ export default class CustomScene {
    * this function gets called very early on in the loading process by the preloader.
    */
   constructor({ artifact, mergeConfig, preload, W }) {
-    /*
-     * this is a reference to THREE.js, all default exports from threejs are in here.
-     */
-    this.THREE = preload.THREE
-
     /*
      * artifact is an object, imported from src/artifact.js
      */
@@ -33,8 +30,6 @@ export default class CustomScene {
    *
    */
   async preload({ preload }) {
-    const { THREE } = preload
-
     /*
      * this function can be used to preload additional assets.
      * for example, the ply loader scene uses this function to load the ply file.

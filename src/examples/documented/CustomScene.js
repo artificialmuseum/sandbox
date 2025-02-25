@@ -1,3 +1,5 @@
+import * as THREE from 'https://stagingengine.artificialmuseum.com/three.js'
+
 export default class CustomScene {
   /*
    * CustomScene constructor
@@ -15,11 +17,6 @@ export default class CustomScene {
         0xff0000, 0x00ff00, 0x0000ff, 0x00ffff, 0xffff00, 0xff00ff, 0x550055, 0x005555, 0x555500,
       ],
     })
-
-    /*
-     * this is a reference to THREE.js, all default exports from threejs are in here.
-     */
-    this.THREE = preload.THREE
 
     /*
      * artifact is an object, imported from src/artifact.js

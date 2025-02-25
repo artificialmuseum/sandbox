@@ -1,10 +1,10 @@
+import * as THREE from 'https://stagingengine.artificialmuseum.com/three.js'
+
 export default class CustomScene {
   constructor({ artifact, mergeConfig, preload }) {
     this.meshes = []
 
     this.counter = 1
-
-    this.THREE = preload.THREE
 
     this.config = mergeConfig(artifact, {
       cubeSize: 0.5,
@@ -14,7 +14,7 @@ export default class CustomScene {
   }
 
   beforeLoadModel({ engine }) {
-    const { BoxGeometry, MeshLambertMaterial, Mesh, Object3D } = this.THREE
+    const { BoxGeometry, MeshLambertMaterial, Mesh, Object3D } = THREE
 
     const { cubeSize, xgrid, ygrid } = this.config
 

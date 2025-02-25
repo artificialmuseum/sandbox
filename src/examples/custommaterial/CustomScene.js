@@ -1,9 +1,10 @@
 import { vertexShader } from './shaders/vertex.shader.js'
 import { fragmentShader } from './shaders/fragment.shader.js'
 
+import * as THREE from 'https://stagingengine.artificialmuseum.com/three.js'
+
 export default class CustomScene {
   constructor({ artifact, mergeConfig, preload }) {
-    this.THREE = preload.THREE
 
     this.config = mergeConfig(artifact, {
       cubeSize: 0.5,
@@ -22,7 +23,7 @@ export default class CustomScene {
   afterLoadModel({ engine }) {
     const { model } = engine
 
-    const { DoubleSide, ShaderMaterial } = this.THREE
+    const { DoubleSide, ShaderMaterial } = THREE
 
     this.customMaterial = new ShaderMaterial({
       transparent: true,

@@ -16,15 +16,20 @@ const isHttp = protocol === 'http:';
 if (!isLocal && isHttp) {
   window.location.protocol = 'https:';
 }
+const params = new URLSearchParams(window.location.search);
+let engineUrl = 'https://stagingengine.artificialmuseum.com';
+if (params.has('engine')) {
+  engineUrl = 'http://localhost:8006';
+}
 const main = async () => {
   const {
     sandbox
-  } = await import('https://stagingengine.artificialmuseum.com/sandbox.js');
+  } = await import(`${engineUrl}/sandbox.js`);
   await sandbox({
     file: 'artifact.js',
     urls: {
       GLB_URL: 'http://localhost:8000',
-      ENGINE_URL: 'https://stagingengine.artificialmuseum.com'
+      ENGINE_URL: engineUrl
     }
   });
 };
