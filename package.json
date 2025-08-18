@@ -4,7 +4,8 @@
   "description": "artificialmuseum.com sandbox - allows creation of artifacts for the Artificial Museum.",
   "scripts": {
     "start": "gss --dir src --cache no -p 8000",
-    "dev": "npm start"
+    "dev": "npm start",
+    "format": "f -w -e src/main.js src/main.css src/index.html"
   },
   "type": "module",
   "author": "SystemKollektiv",
@@ -25,5 +26,8 @@
       "name": "nick fox-gieg",
       "url": "https://github.com/n1ckfg/"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@magic/format": "0.0.68"
+  }
 }
