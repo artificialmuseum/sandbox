@@ -64,6 +64,8 @@ See the
 [src/CustomScene.js](https://github.com/artificialmuseum/sandbox/blob/master/src/examples/documented/CustomScene.js)
 file for a list of all those functions.
 
-## Glitch
+## Glitch - Deprecated
 
-this sandbox can be loaded on glitch, go to [artificialmuseum/glitch](https://github.com/artificialmuseum/glitch) to see how to.
+unfortunately, glitch is closed.
+
+~~this sandbox can be loaded on glitch, go to [artificialmuseum/glitch](https://github.com/artificialmuseum/glitch) to see how to.~~
