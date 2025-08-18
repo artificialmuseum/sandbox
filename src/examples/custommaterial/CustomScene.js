@@ -5,7 +5,6 @@ import * as THREE from 'https://stagingengine.artificialmuseum.com/three.js'
 
 export default class CustomScene {
   constructor({ artifact, mergeConfig, preload }) {
-
     this.config = mergeConfig(artifact, {
       cubeSize: 0.5,
       xgrid: 20,
