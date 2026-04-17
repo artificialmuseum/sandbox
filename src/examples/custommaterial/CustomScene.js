@@ -1,7 +1,7 @@
 import { vertexShader } from './shaders/vertex.shader.js'
 import { fragmentShader } from './shaders/fragment.shader.js'
 
-import * as THREE from 'https://stagingengine.artificialmuseum.com/three.js'
+import * as THREE from 'https://engine.artificialmuseum.com/staging/three.js'
 
 export default class CustomScene {
   constructor({ artifact, mergeConfig, preload }) {

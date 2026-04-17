@@ -1,4 +1,4 @@
-import * as THREE from 'https://stagingengine.artificialmuseum.com/three.js'
+import * as THREE from 'https://engine.artificialmuseum.com/staging/three.js'
 
 export default class CustomScene {
   constructor({ artifact, mergeConfig, preload }) {
