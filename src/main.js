@@ -17,7 +17,7 @@ if (!isLocal && isHttp) {
   window.location.protocol = 'https:';
 }
 const params = new URLSearchParams(window.location.search);
-let engineUrl = 'https://stagingengine.artificialmuseum.com';
+let engineUrl = 'https://engine.artificialmuseum.com/staging';
 if (params.has('engine')) {
   engineUrl = 'http://localhost:8006';
 }
